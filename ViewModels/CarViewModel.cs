@@ -13,9 +13,11 @@ namespace CRUD_mob_app.ViewModels
 {
     public partial class CarViewModel : ObservableObject
     {
-        public CarViewModel()
+        IConnectivity connectivity;
+        public CarViewModel(IConnectivity connectivity)
         {
             Items = new ObservableCollection<string>();
+            this.connectivity = connectivity;
         }
 
         [ObservableProperty]
@@ -25,10 +27,17 @@ namespace CRUD_mob_app.ViewModels
         string text;
 
         [RelayCommand]
-        void Add()
+        async Task Add()
         {
             if (string.IsNullOrWhiteSpace(Text))
                 return;
+        
+            if(connectivity.NetworkAccess != NetworkAccess.Internet)
+            {
+                await Shell.Current.DisplayAlert("Oh!","No internet connection!", "ÖK'");
+                return;
+            }
+
             Items.Add(text);
             //aici adauga masinile
             Text = string.Empty;

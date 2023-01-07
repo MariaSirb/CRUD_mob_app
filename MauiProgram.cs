@@ -1,4 +1,7 @@
-﻿namespace CRUD_mob_app;
+﻿//using Bumptech.Glide.Load.Resource.Bitmap;
+using CRUD_mob_app.ViewModels;
+
+namespace CRUD_mob_app;
 
 public static class MauiProgram
 {
@@ -13,6 +16,15 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		return builder.Build();
+		builder.Services.AddSingleton<IConnectivity>(Connectivity.Current);
+
+		builder.Services.AddSingleton<Car>();
+		builder.Services.AddSingleton<CarViewModel>();
+
+		builder.Services.AddTransient<DetailPage>();
+        builder.Services.AddTransient<DetailViewModel>();
+
+
+        return builder.Build();
 	}
 }
