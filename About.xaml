@@ -8,11 +8,21 @@
             Text="About us..."
             VerticalOptions="Center" 
             HorizontalOptions="Center" 
-            FontSize="Title"/>
+            FontSize="Title"
+            FontAttributes="Bold"/>
 
         <Label
            Text="Aceast este o aplicatie mobila perfecta pentru tine"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
             FontSize="Subtitle"
+            FontAttributes="Italic"/>
+
+        <Label
+           Text="In cadrul acestei aplicatii poti sai-ti adaugi masinile tale preferate pe care le-ai inchiriat de la noi! Multumim pentru colaborare si te mai asteptam!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="Small"
         />
     </VerticalStackLayout>
 </ContentPage>

@@ -8,17 +8,17 @@
 
     <TabBar>
         <ShellContent
-        Title="Welcome page"
+        Title="My favourite cars"
         ContentTemplate="{DataTemplate local:MainPage}"
         />
         <ShellContent
         Title="About us"
         ContentTemplate="{DataTemplate local:About}"
- />
+        />
         <ShellContent
         Title="My cars"
         ContentTemplate="{DataTemplate local:Car}"
- />
+        />
     </TabBar>
 
 </Shell>

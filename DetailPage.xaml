@@ -5,7 +5,7 @@
              xmlns:viewmodel="clr-namespace:CRUD_mob_app.ViewModels"
              x:DataType="viewmodel:DetailViewModel"
              Title="DetailPage">
-    <StackLayout Padding="20">
+    <StackLayout Padding="20" BackgroundColor="#a3a384">
         <Label 
             Text="{Binding Text}"
             FontSize="20"
