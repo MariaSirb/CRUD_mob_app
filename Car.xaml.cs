@@ -4,9 +4,9 @@ namespace CRUD_mob_app;
 
 public partial class Car : ContentPage
 {
-	public Car(CarViewModel c)
+	public Car(CarViewModel car)
 	{
 		InitializeComponent();
-		BindingContext = c;
+		BindingContext = car;
 	}
 }

@@ -22,7 +22,7 @@ public static class MauiProgram
 		builder.Services.AddSingleton<CarViewModel>();
 
 		builder.Services.AddTransient<DetailPage>();
-        builder.Services.AddTransient<DetailViewModel>();
+		builder.Services.AddTransient<DetailViewModel>();
 
 
         return builder.Build();
